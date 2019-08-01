@@ -6,6 +6,12 @@ It does *not* use Semantic Versioning. Instead, "version numbers" here are based
 release dates following the ISO-like YYYY.MM.DD format.
 
 ## [Unreleased]
+### Changed
+- Condensing commands in Dockerfile to reduce number of steps/layers.
+
+### Removed
+- During build, after the last call to `apt` has been made, `/var/lib/apt/lists/*` will now be
+  cleaned up properly.
 
 ## [2019.08.01]
 Initial commit.
