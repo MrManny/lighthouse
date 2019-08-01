@@ -9,4 +9,5 @@ RUN apt-get install -y nodejs && \
     mkdir -p /reports && \
     chmod 777 /reports && \
     chmod +x /usr/local/bin/check.sh
+VOLUME /reports
 WORKDIR /reports
