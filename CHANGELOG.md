@@ -8,6 +8,7 @@ release dates following the ISO-like YYYY.MM.DD format.
 ## [Unreleased]
 ### Changed
 - Condensing commands in Dockerfile to reduce number of steps/layers.
+- check.sh now accepts multiple URLs at once.
 
 ### Removed
 - During build, after the last call to `apt` has been made, `/var/lib/apt/lists/*` will now be
