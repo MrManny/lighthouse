@@ -14,8 +14,8 @@ then
   exit 1
 fi
 
-NAME=$(date -Iseconds)
 while [[ "$1" ]]; do
+  NAME=$(date -Iseconds)
   lighthouse "$1" --chrome-flags="--headless --no-sandbox" --no-enable-error-reporting --output=json --emulated-form-factor=none --throttling-method=provided --only-categories=performance --output-path="/reports/${NAME}.json"
   shift
 done
