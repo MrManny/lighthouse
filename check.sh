@@ -15,8 +15,7 @@ then
 fi
 
 NAME=$(date -Iseconds)
-
-for url in "$@"
-do
-  lighthouse "$url" --chrome-flags="--headless --no-sandbox" --no-enable-error-reporting --output=json --emulated-form-factor=none --throttling-method=provided --only-categories=performance --output-path="/reports/${NAME}.json"
+while [[ "$1" ]]; do
+  lighthouse "$1" --chrome-flags="--headless --no-sandbox" --no-enable-error-reporting --output=json --emulated-form-factor=none --throttling-method=provided --only-categories=performance --output-path="/reports/${NAME}.json"
+  shift
 done
