@@ -3,6 +3,13 @@
 This docker image aims at bundling Lighthouse and Chromium into an Ubuntu-based environment.
 The result allows for quick and easy performance tests and audits based on these tools.
 
+## Tags
+
+| Tag      | Description                                              |
+| -------- | -------------------------------------------------------- |
+| latest   | Stable version                                           |
+| develop  | Experimental development version                         |
+
 ## What's in it
 
 This image is directly based on `ubuntu:19.04`. In addition, it installs:
