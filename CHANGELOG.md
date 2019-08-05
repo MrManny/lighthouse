@@ -6,9 +6,9 @@ It does *not* use Semantic Versioning. Instead, "version numbers" here are based
 release dates following the ISO-like YYYY.MM.DD format.
 
 ## [Unreleased]
-### Fixed
-- Previously, it was possible that when measuring multiple sites, the results of subsequent
-  measurements could have overwritten previous files.
+### Changed
+- In the `check.sh` helper script, all throttling-related CLI options are now set to 0,
+  hopefully disabling them altogether.
 
 ## [2019.08.05]
 ### Fixed

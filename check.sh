@@ -16,6 +16,18 @@ fi
 
 while [[ "$1" ]]; do
   NAME=$(date -Iseconds)
-  lighthouse "$1" --chrome-flags="--headless --no-sandbox" --no-enable-error-reporting --output=json --emulated-form-factor=none --throttling-method=provided --only-categories=performance --output-path="/reports/${NAME}.json"
+  lighthouse "$1" --chrome-flags="--headless --no-sandbox" \
+                  --no-enable-error-reporting \
+                  --output=json \
+                  --emulated-form-factor=none \
+                  --throttling-method=provided \
+                  --throttling.rttMs=0 \
+                  --throttling.throughputKbps=0 \
+                  --throttling.requestLatencyMs=0 \
+                  --throttling.downloadThroughputKbps=0 \
+                  --throttling.uploadThroughputKbps=0 \
+                  --throttling.cpuSlowdownMultiplier=0 \
+                  --only-categories=performance \
+                  --output-path="/reports/${NAME}.json"
   shift
 done
