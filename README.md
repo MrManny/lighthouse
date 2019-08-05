@@ -18,9 +18,11 @@ The image also contains a small script named `check.sh`.
 Using this simple script, you can quickly perform a performance-only test without throttling using
 Lighthouse and a headless Chromium instance:
 
-> Usage:  check.sh  <URL>
+> Usage:    check.sh  \<URL\> \[\<URL\>...\]
 >
-> This script begins a Lighthouse-based performance auditing of the given URL and stores them as JSON.
+> This script begins a Lighthouse-based performance auditing of the given URLs and stores JSON reports.
+>
+> Example:  check.sh https://www.ait.ac.at/ https://www.google.com/
 
 Any reports this script generates will be automatically put into `/reports`. The file name of
 this report is the current date and time, formatted according to ISO 8601 with precision down to
