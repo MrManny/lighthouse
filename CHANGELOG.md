@@ -8,6 +8,10 @@ release dates following the ISO-like YYYY.MM.DD format.
 ## [Unreleased]
 
 ## [2019.08.05]
+### Fixed
+- Previously, it was possible that when measuring multiple sites, the results of subsequent
+  measurements could have overwritten previous files.
+
 ### Changed
 - Condensing commands in Dockerfile to reduce number of steps/layers.
 - check.sh now accepts multiple URLs at once.
