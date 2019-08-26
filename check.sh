@@ -29,6 +29,6 @@ while [[ "$1" ]]; do
                   --throttling.uploadThroughputKbps=0 \
                   --throttling.cpuSlowdownMultiplier=0 \
                   --only-categories=performance \
-                  --output-path="/reports/${NAME}.json"
+                  --output-path="/reports/${NAME}.json" || true
   shift
 done
