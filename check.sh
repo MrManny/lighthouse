@@ -16,10 +16,11 @@ fi
 
 while [[ "$1" ]]; do
   NAME=$(date -Iseconds)
-  lighthouse "$1" --chrome-flags="--headless --no-sandbox" \
+  lighthouse "$1" --chrome-flags="--headless --no-sandbox --window-size=1280,720" \
                   --no-enable-error-reporting \
                   --output=json \
                   --emulated-form-factor=none \
+                  --max-wait-for-load=30000 \
                   --throttling-method=provided \
                   --throttling.rttMs=0 \
                   --throttling.throughputKbps=0 \

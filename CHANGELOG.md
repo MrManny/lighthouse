@@ -9,6 +9,8 @@ release dates following the ISO-like YYYY.MM.DD format.
 ### Changed
 - In the `check.sh` helper script, all throttling-related CLI options are now set to 0,
   hopefully disabling them altogether.
+- The maximum amount of time to wait for a page to load has been reduced to 30 seconds.
+- Chrome's window size is explicitly set to 1280x720. 
 
 ## [2019.08.05]
 ### Fixed
