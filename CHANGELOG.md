@@ -7,6 +7,13 @@ release dates following the ISO-like YYYY.MM.DD format.
 
 ## [Unreleased]
 
+## [2019.08.26]
+### Changed
+- In the `check.sh` helper script, all throttling-related CLI options are now set to 0,
+  hopefully disabling them altogether.
+- The maximum amount of time to wait for a page to load has been reduced to 30 seconds.
+- Chrome's window size is explicitly set to 1280x720. 
+
 ## [2019.08.05]
 ### Fixed
 - Previously, it was possible that when measuring multiple sites, the results of subsequent
@@ -29,5 +36,6 @@ Initial commit.
 - Added Changelog
 
 [Unreleased]: https://github.com/MrManny/lighthouse/compare/master...develop
+[2019.08.26]: https://github.com/MrManny/lighthouse/compare/2019.08.05...2019.08.26
 [2019.08.05]: https://github.com/MrManny/lighthouse/compare/2019.08.01...2019.08.05
 [2019.08.01]: https://github.com/MrManny/lighthouse/releases/tag/2019.08.01
