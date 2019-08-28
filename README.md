@@ -1,6 +1,7 @@
 # Lighthouse Performance Evaluation
 
 This docker image aims at bundling Lighthouse and Chromium into an Ubuntu-based environment.
+All tests will be run in a headless environment.
 The result allows for quick and easy performance tests and audits based on these tools.
 
 ## Tags

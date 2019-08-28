@@ -16,6 +16,9 @@ fi
 
 while [[ "$1" ]]; do
   NAME=$(date -Iseconds)
+  echo " ---------------------------------------"
+  echo "  URL: $1"
+  echo " ---------------------------------------"
   lighthouse "$1" --chrome-flags="--headless --no-sandbox --window-size=1280,720" \
                   --no-enable-error-reporting \
                   --output=json \
@@ -29,6 +32,6 @@ while [[ "$1" ]]; do
                   --throttling.uploadThroughputKbps=0 \
                   --throttling.cpuSlowdownMultiplier=0 \
                   --only-categories=performance \
-                  --output-path="/reports/${NAME}.json"
+                  --output-path="/reports/${NAME}.json" || true
   shift
 done

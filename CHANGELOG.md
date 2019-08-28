@@ -7,6 +7,10 @@ release dates following the ISO-like YYYY.MM.DD format.
 
 ## [Unreleased]
 
+## [2019.08.28]
+### Changed
+- The console output (stdout) has been altered slightly to report which URL is being measured.
+
 ## [2019.08.26]
 ### Changed
 - In the `check.sh` helper script, all throttling-related CLI options are now set to 0,
@@ -36,6 +40,7 @@ Initial commit.
 - Added Changelog
 
 [Unreleased]: https://github.com/MrManny/lighthouse/compare/master...develop
+[2019.08.28]: https://github.com/MrManny/lighthouse/compare/2019.08.26...2019.08.28
 [2019.08.26]: https://github.com/MrManny/lighthouse/compare/2019.08.05...2019.08.26
 [2019.08.05]: https://github.com/MrManny/lighthouse/compare/2019.08.01...2019.08.05
 [2019.08.01]: https://github.com/MrManny/lighthouse/releases/tag/2019.08.01
