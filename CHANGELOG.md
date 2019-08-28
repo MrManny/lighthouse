@@ -6,6 +6,8 @@ It does *not* use Semantic Versioning. Instead, "version numbers" here are based
 release dates following the ISO-like YYYY.MM.DD format.
 
 ## [Unreleased]
+### Changed
+- The console output (stdout) has been altered slightly to report which URL is being measured.
 
 ## [2019.08.26]
 ### Changed
