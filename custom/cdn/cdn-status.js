@@ -39,7 +39,7 @@ class CdnStatus extends Audit {
       rawValue: JSON.stringify(matching),
       details: {
         type: 'debugdata',
-        items: [matching]
+        items: matching
       }
     };
   }
