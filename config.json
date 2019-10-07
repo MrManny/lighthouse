@@ -122,15 +122,6 @@
       "path": "bootup-time"
     },
     {
-      "path": "uses-rel-preload"
-    },
-    {
-      "path": "uses-rel-preconnect"
-    },
-    {
-      "path": "font-display"
-    },
-    {
       "path": "diagnostics"
     },
     {
@@ -158,43 +149,13 @@
       "path": "third-party-summary"
     },
     {
-      "path": "byte-efficiency/uses-long-cache-ttl"
-    },
-    {
       "path": "byte-efficiency/total-byte-weight"
     },
     {
-      "path": "byte-efficiency/offscreen-images"
-    },
-    {
-      "path": "byte-efficiency/render-blocking-resources"
-    },
-    {
-      "path": "byte-efficiency/unminified-css"
-    },
-    {
-      "path": "byte-efficiency/unminified-javascript"
-    },
-    {
-      "path": "byte-efficiency/unused-css-rules"
-    },
-    {
-      "path": "byte-efficiency/uses-webp-images"
-    },
-    {
-      "path": "byte-efficiency/uses-optimized-images"
-    },
-    {
-      "path": "byte-efficiency/uses-text-compression"
-    },
-    {
-      "path": "byte-efficiency/uses-responsive-images"
-    },
-    {
-      "path": "byte-efficiency/efficient-animated-content"
-    },
-    {
       "path": "dobetterweb/dom-size"
+    },
+    {
+      "path": "./custom/cdn/cdn-status.js"
     }
   ],
   "categories": {
@@ -222,6 +183,11 @@
           "group": "metrics"
         },
         {
+          "id": "cdn/cdn-status",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
           "id": "first-cpu-idle",
           "weight": 2,
           "group": "metrics"
@@ -240,56 +206,6 @@
           "weight": 0
         },
         {
-          "id": "render-blocking-resources",
-          "weight": 0,
-          "group": "load-opportunities"
-        },
-        {
-          "id": "uses-responsive-images",
-          "weight": 0,
-          "group": "load-opportunities"
-        },
-        {
-          "id": "offscreen-images",
-          "weight": 0,
-          "group": "load-opportunities"
-        },
-        {
-          "id": "unminified-css",
-          "weight": 0,
-          "group": "load-opportunities"
-        },
-        {
-          "id": "unminified-javascript",
-          "weight": 0,
-          "group": "load-opportunities"
-        },
-        {
-          "id": "unused-css-rules",
-          "weight": 0,
-          "group": "load-opportunities"
-        },
-        {
-          "id": "uses-optimized-images",
-          "weight": 0,
-          "group": "load-opportunities"
-        },
-        {
-          "id": "uses-webp-images",
-          "weight": 0,
-          "group": "load-opportunities"
-        },
-        {
-          "id": "uses-text-compression",
-          "weight": 0,
-          "group": "load-opportunities"
-        },
-        {
-          "id": "uses-rel-preconnect",
-          "weight": 0,
-          "group": "load-opportunities"
-        },
-        {
           "id": "time-to-first-byte",
           "weight": 0,
           "group": "load-opportunities"
@@ -300,22 +216,7 @@
           "group": "load-opportunities"
         },
         {
-          "id": "uses-rel-preload",
-          "weight": 0,
-          "group": "load-opportunities"
-        },
-        {
-          "id": "efficient-animated-content",
-          "weight": 0,
-          "group": "load-opportunities"
-        },
-        {
           "id": "total-byte-weight",
-          "weight": 0,
-          "group": "diagnostics"
-        },
-        {
-          "id": "uses-long-cache-ttl",
           "weight": 0,
           "group": "diagnostics"
         },
@@ -341,11 +242,6 @@
         },
         {
           "id": "mainthread-work-breakdown",
-          "weight": 0,
-          "group": "diagnostics"
-        },
-        {
-          "id": "font-display",
           "weight": 0,
           "group": "diagnostics"
         },

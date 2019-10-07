@@ -22,6 +22,7 @@ while [[ "$1" ]]; do
   lighthouse "$1" --chrome-flags="--headless --no-sandbox --window-size=1280,720" \
                   --config-path="./config.json" \
                   --no-enable-error-reporting \
+                  --output=json \
                   --output-path="/reports/${NAME}.json" || true
   shift
 done
