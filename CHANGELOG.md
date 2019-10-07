@@ -6,6 +6,16 @@ It does *not* use Semantic Versioning. Instead, "version numbers" here are based
 release dates following the ISO-like YYYY.MM.DD format.
 
 ## [Unreleased]
+### Added
+- Adding informative `cdn/cdn-status` audit that looks for the first "main" response. Currently,
+  that is the first network response with a HTTP status code in the 2xx range. If anything is found
+  that looks like a potential CDN hit/miss indicator, it will be extracted. Currently, the regular
+  expression tasked to filter through response headers is looking for:
+  `^(x|cf)(-varnish)?-cache(-status)?$`
+
+### Removed
+- Several audits that only focus on best practices have been removed. This container is solely
+  designed to benchmark site performance.
 
 ## [2019.08.28]
 ### Changed

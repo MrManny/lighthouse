@@ -153,6 +153,9 @@
     },
     {
       "path": "dobetterweb/dom-size"
+    },
+    {
+      "path": "./custom/cdn/cdn-status.js"
     }
   ],
   "categories": {
@@ -178,6 +181,11 @@
           "id": "interactive",
           "weight": 5,
           "group": "metrics"
+        },
+        {
+          "id": "cdn/cdn-status",
+          "weight": 0,
+          "group": "diagnostics"
         },
         {
           "id": "first-cpu-idle",
