@@ -4,6 +4,8 @@ const {Audit} = require('lighthouse');
 
 class CdnStatus extends Audit {
   static KnownCdnHeaderExpr = /^(x|cf)(-varnish)?-cache(-status)?$/i;
+  static EdgeLocationHeaderExpr = /^(x-served-by|x-amz-cf-pop|cf-ray|x-msedge-ref)$/i;
+  static EdgeLocationValueExpr = /-([a-z]{2,3}[0-9]{0,3})$/i;
 
   static get meta() {
     return {
@@ -24,22 +26,29 @@ class CdnStatus extends Audit {
     }
 
     const keys = Object.keys(firstInteraction.headers);
-    const matching = keys
+    const matchingCdnHitMiss = keys
       .filter(key => this.KnownCdnHeaderExpr.test(key))
+      .map(key => firstInteraction.headers[key])
+    ;
+    const matchingCdnLocation = keys
+      .filter(key => this.EdgeLocationHeaderExpr.test(key))
       .map(key => {
-        const result = {};
-        result[key] = firstInteraction.headers[key];
-        return result;
+        const value = firstInteraction.headers[key];
+        const matches = this.EdgeLocationValueExpr.exec(value);
+        return matches && matches.length > 1 ? matches[1] : value;
       })
     ;
 
     return {
-      score: matching.length,
-      displayValue: JSON.stringify(matching),
-      rawValue: JSON.stringify(matching),
+      score: matchingCdnHitMiss.length,
+      displayValue: JSON.stringify(matchingCdnHitMiss),
+      rawValue: matchingCdnHitMiss.length,
       details: {
         type: 'debugdata',
-        items: matching
+        items: {
+          cache: matchingCdnHitMiss,
+          edge: matchingCdnLocation
+        }
       }
     };
   }
