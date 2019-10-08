@@ -20,7 +20,7 @@ while [[ "$1" ]]; do
   echo "  URL: $1"
   echo " ---------------------------------------"
   lighthouse "$1" --chrome-flags="--headless --no-sandbox --window-size=1280,720" \
-                  --config-path="./config.json" \
+                  --config-path="/usr/src/app/config.json" \
                   --no-enable-error-reporting \
                   --output=json \
                   --output-path="/reports/${NAME}.json" || true
