@@ -1,0 +1,368 @@
+{
+  "settings": {
+    "output": [
+      "json"
+    ],
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 30000,
+    "throttlingMethod": "provided",
+    "throttling": {
+      "rttMs": 0,
+      "throughputKbps": 0,
+      "requestLatencyMs": 0,
+      "downloadThroughputKbps": 0,
+      "uploadThroughputKbps": 0,
+      "cpuSlowdownMultiplier": 0
+    },
+    "auditMode": false,
+    "gatherMode": false,
+    "disableStorageReset": false,
+    "emulatedFormFactor": "none",
+    "channel": "cli",
+    "budgets": null,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "performance"
+    ],
+    "skipAudits": null
+  },
+  "passes": [
+    {
+      "passName": "defaultPass",
+      "recordTrace": true,
+      "useThrottling": true,
+      "pauseAfterLoadMs": 5250,
+      "networkQuietThresholdMs": 5250,
+      "cpuQuietThresholdMs": 5250,
+      "blockedUrlPatterns": [],
+      "blankPage": "about:blank",
+      "gatherers": [
+        {
+          "path": "css-usage"
+        },
+        {
+          "path": "viewport-dimensions"
+        },
+        {
+          "path": "image-elements"
+        },
+        {
+          "path": "link-elements"
+        },
+        {
+          "path": "script-elements"
+        },
+        {
+          "path": "dobetterweb/domstats"
+        },
+        {
+          "path": "dobetterweb/optimized-images"
+        },
+        {
+          "path": "dobetterweb/response-compression"
+        },
+        {
+          "path": "dobetterweb/tags-blocking-first-paint"
+        }
+      ]
+    }
+  ],
+  "audits": [
+    {
+      "path": "metrics/first-contentful-paint"
+    },
+    {
+      "path": "metrics/first-meaningful-paint"
+    },
+    {
+      "path": "metrics/speed-index"
+    },
+    {
+      "path": "screenshot-thumbnails"
+    },
+    {
+      "path": "final-screenshot"
+    },
+    {
+      "path": "metrics/estimated-input-latency"
+    },
+    {
+      "path": "metrics/total-blocking-time"
+    },
+    {
+      "path": "metrics/max-potential-fid"
+    },
+    {
+      "path": "time-to-first-byte"
+    },
+    {
+      "path": "metrics/first-cpu-idle"
+    },
+    {
+      "path": "metrics/interactive"
+    },
+    {
+      "path": "user-timings"
+    },
+    {
+      "path": "critical-request-chains"
+    },
+    {
+      "path": "redirects"
+    },
+    {
+      "path": "mainthread-work-breakdown"
+    },
+    {
+      "path": "bootup-time"
+    },
+    {
+      "path": "diagnostics"
+    },
+    {
+      "path": "network-requests"
+    },
+    {
+      "path": "network-rtt"
+    },
+    {
+      "path": "network-server-latency"
+    },
+    {
+      "path": "main-thread-tasks"
+    },
+    {
+      "path": "metrics"
+    },
+    {
+      "path": "performance-budget"
+    },
+    {
+      "path": "resource-summary"
+    },
+    {
+      "path": "third-party-summary"
+    },
+    {
+      "path": "byte-efficiency/total-byte-weight"
+    },
+    {
+      "path": "dobetterweb/dom-size"
+    },
+    {
+      "path": "./custom/cdn/cdn-status.js"
+    }
+  ],
+  "categories": {
+    "performance": {
+      "title": "Performance",
+      "auditRefs": [
+        {
+          "id": "first-contentful-paint",
+          "weight": 3,
+          "group": "metrics"
+        },
+        {
+          "id": "first-meaningful-paint",
+          "weight": 1,
+          "group": "metrics"
+        },
+        {
+          "id": "speed-index",
+          "weight": 4,
+          "group": "metrics"
+        },
+        {
+          "id": "interactive",
+          "weight": 5,
+          "group": "metrics"
+        },
+        {
+          "id": "cdn/cdn-status",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "first-cpu-idle",
+          "weight": 2,
+          "group": "metrics"
+        },
+        {
+          "id": "max-potential-fid",
+          "weight": 0,
+          "group": "metrics"
+        },
+        {
+          "id": "estimated-input-latency",
+          "weight": 0
+        },
+        {
+          "id": "total-blocking-time",
+          "weight": 0
+        },
+        {
+          "id": "time-to-first-byte",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "redirects",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "total-byte-weight",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "dom-size",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "critical-request-chains",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "user-timings",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "bootup-time",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "mainthread-work-breakdown",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "performance-budget",
+          "weight": 0,
+          "group": "budgets"
+        },
+        {
+          "id": "resource-summary",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "third-party-summary",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "network-requests",
+          "weight": 0
+        },
+        {
+          "id": "network-rtt",
+          "weight": 0
+        },
+        {
+          "id": "network-server-latency",
+          "weight": 0
+        },
+        {
+          "id": "main-thread-tasks",
+          "weight": 0
+        },
+        {
+          "id": "diagnostics",
+          "weight": 0
+        },
+        {
+          "id": "metrics",
+          "weight": 0
+        },
+        {
+          "id": "screenshot-thumbnails",
+          "weight": 0
+        },
+        {
+          "id": "final-screenshot",
+          "weight": 0
+        }
+      ]
+    }
+  },
+  "groups": {
+    "metrics": {
+      "title": "Metrics"
+    },
+    "load-opportunities": {
+      "title": "Opportunities",
+      "description": "These suggestions can help your page load faster. They don't [directly affect](https://github.com/GoogleChrome/lighthouse/blob/d2ec9ffbb21de9ad1a0f86ed24575eda32c796f0/docs/scoring.md#how-are-the-scores-weighted) the Performance score."
+    },
+    "budgets": {
+      "title": "Budgets",
+      "description": "Performance budgets set standards for the performance of your site."
+    },
+    "diagnostics": {
+      "title": "Diagnostics",
+      "description": "More information about the performance of your application. These numbers don't [directly affect](https://github.com/GoogleChrome/lighthouse/blob/d2ec9ffbb21de9ad1a0f86ed24575eda32c796f0/docs/scoring.md#how-are-the-scores-weighted) the Performance score."
+    },
+    "pwa-fast-reliable": {
+      "title": "Fast and reliable"
+    },
+    "pwa-installable": {
+      "title": "Installable"
+    },
+    "pwa-optimized": {
+      "title": "PWA Optimized"
+    },
+    "a11y-best-practices": {
+      "title": "Best practices",
+      "description": "These items highlight common accessibility best practices."
+    },
+    "a11y-color-contrast": {
+      "title": "Contrast",
+      "description": "These are opportunities to improve the legibility of your content."
+    },
+    "a11y-names-labels": {
+      "title": "Names and labels",
+      "description": "These are opportunities to improve the semantics of the controls in your application. This may enhance the experience for users of assistive technology, like a screen reader."
+    },
+    "a11y-navigation": {
+      "title": "Navigation",
+      "description": "These are opportunities to improve keyboard navigation in your application."
+    },
+    "a11y-aria": {
+      "title": "ARIA",
+      "description": "These are opportunities to improve the usage of ARIA in your application which may enhance the experience for users of assistive technology, like a screen reader."
+    },
+    "a11y-language": {
+      "title": "Internationalization and localization",
+      "description": "These are opportunities to improve the interpretation of your content by users in different locales."
+    },
+    "a11y-audio-video": {
+      "title": "Audio and video",
+      "description": "These are opportunities to provide alternative content for audio and video. This may improve the experience for users with hearing or vision impairments."
+    },
+    "a11y-tables-lists": {
+      "title": "Tables and lists",
+      "description": "These are opportunities to to improve the experience of reading tabular or list data using assistive technology, like a screen reader."
+    },
+    "seo-mobile": {
+      "title": "Mobile Friendly",
+      "description": "Make sure your pages are mobile friendly so users don’t have to pinch or zoom in order to read the content pages. [Learn more](https://developers.google.com/search/mobile-sites/)."
+    },
+    "seo-content": {
+      "title": "Content Best Practices",
+      "description": "Format your HTML in a way that enables crawlers to better understand your app’s content."
+    },
+    "seo-crawl": {
+      "title": "Crawling and Indexing",
+      "description": "To appear in search results, crawlers need access to your app."
+    }
+  }
+}

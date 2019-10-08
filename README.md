@@ -69,5 +69,5 @@ If you add `--rm` to the docker run command, the container will be removed after
 
 Example:
 ```bash
-docker run -it --rm --network bridge -v /reports/go/here:/reports mrmanny/lighthouse check.sh https://hub.docker.com
+docker run -it --rm --network bridge -v /reports/go/here:/reports mrmanny/lighthouse /usr/src/app/check.sh https://hub.docker.com
 ```

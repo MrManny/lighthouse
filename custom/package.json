@@ -1,0 +1,11 @@
+{
+  "name": "custom-lighthouse-audits",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A set of custom Lighthouse audits",
+  "author": "Manuel Warum <manuel.warum@ait.ac.at>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "lighthouse": "^5.5.0"
+  }
+}

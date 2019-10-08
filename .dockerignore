@@ -1,0 +1,10 @@
+# Supplementary files
+custom/node_modules
+Dockerfile
+.editorconfig
+.gitignore
+.git
+
+# IntelliJ project files
+.idea
+*.iml
