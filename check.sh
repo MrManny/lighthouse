@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 usage() {
   echo "Usage:    check.sh  <URL> [<URL>...]"
   echo ""
