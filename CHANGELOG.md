@@ -54,7 +54,7 @@ Initial commit.
 - Added Changelog
 
 [Unreleased]: https://github.com/MrManny/lighthouse/compare/master...develop
-[2019.08.28]: https://github.com/MrManny/lighthouse/compare/2019.08.28...2019.10.08
+[2019.10.08]: https://github.com/MrManny/lighthouse/compare/2019.08.28...2019.10.08
 [2019.08.28]: https://github.com/MrManny/lighthouse/compare/2019.08.26...2019.08.28
 [2019.08.26]: https://github.com/MrManny/lighthouse/compare/2019.08.05...2019.08.26
 [2019.08.05]: https://github.com/MrManny/lighthouse/compare/2019.08.01...2019.08.05
