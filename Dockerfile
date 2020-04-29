@@ -1,9 +1,9 @@
-FROM ubuntu:19.04
+FROM ubuntu:20.04
 WORKDIR /usr/src/app
 COPY . /usr/src/app
 RUN apt-get update && \
     apt-get install -y curl chromium-browser && \
-    curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get install -y nodejs && \
     rm -rf /var/lib/apt/lists/* && \
     npm i -g npm && \
